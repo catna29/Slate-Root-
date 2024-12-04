@@ -146,29 +146,19 @@
 
 }
 
-  
-  /* Hero Section */
-  .hero {
-    padding: 1rem 5rem;
-  }
-  
-  .hero-images {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .hero-images img {
-    width: 30%;
-    border-radius: 8px;
-  }
-  
+
   /* New Arrivals */
-  .new-arrivals {
-    padding: 1rem;
+  main h1{
+    text-align: center;
+    color: var(--grey);
+    border-bottom: solid;
+  }
+
+  .lookbook {
+    padding: 2rem;
   }
   
-  .new-arrivals h2 {
+  .lookbook h2 {
     margin-bottom: 1rem;
   }
   
@@ -176,13 +166,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 2em;
   }
   
   .product {
-    flex: 1 1 20%;
+    flex: 1 1 30%;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
   }
 
   .product p {
@@ -191,16 +180,9 @@
   
   .product img {
     width: 100%;
-    border-bottom: solid;
+    border-radius: 8px;
   }
   
-  .view-all {
-    display: block;
-    margin: 3rem auto;
-    text-align: center;
-    text-decoration: none;
-    color: var(--black);
-  }
   
   /* Footer info */
   .footer_info {
