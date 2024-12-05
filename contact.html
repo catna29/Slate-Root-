@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slate & Root</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+        <div class="header_bar">
+            <div>
+              <a href="home.html">
+                <h2>Slate</h2>
+                <h2>& </h2>
+                <h2>Root </h2>
+                <p> A WESTCOAST COMPANY </p>
+              </a>
+            </div>
+            <nav class="nav-links">
+                <a href="shop.html"> SHOP </a>
+                <a href="lookbook.html"> LOOKBOOK</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            <nav class="sidebar">
+              <a href="#" class="close" onclick= hideSidebar()><i class="fa-solid fa-xmark"></i></a>
+              <a href="shop.html"> SHOP </a>
+              <a href="lookbook.html"> LOOKBOOK</a>
+              <a href="contact.html">CONTACT</a>
+          </nav>
+        </div>
+        <div>
+          <ul class="right_bar">
+            <li><a href="#" class="login"> LOGIN</a> </li>
+            <li onclick=showSidebar()><a href="#" class="hamberger"> <i class="fa-solid fa-bars"></i> </a></li>
+          </ul>
+            
+            
+        </div>
+  </header>
+
+  <main>
+    <h1> CONTACT </h1>
+
+    <div class="contact_form">
+        <div class="question detail">
+            <h2>Have a question?</h2>
+            <h4>Customer service</h4>
+            <p> communityinfo@slatenroot.com </p>
+        </div>
+        <div class="form-container detail">
+            <h2>Submit an Inquiry</h2>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="|" required >
+        
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="|" required>
+        
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="|" required></textarea>
+        
+              <button type="submit">Submit</button>
+            </form>
+        </div>  
+    </div>
+
+    <div class="FAQ">
+            <h2> FAQ </h2>
+            <div class="ship">
+                <h3> SHIPPING </h3>
+                <div class="ship_content">
+                    <h4> I received a tracking number but the shipment has not moved.</h4>
+                    <h4> My order hasn’t shipped why?</h4>
+                    <h4> International shipping</h4>
+                </div>
+            </div>
+
+    </div>
+  </main>
+
+
+  <div class="footer_info">
+    <div class="company info">
+        <h2>Slate & Root, LLC</h2>
+        <p>A Westcoast Company<br>All Rights Reserved, 2024™</p>
+    </div>
+    <div class="info_ship info">
+        <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Private Policy</a></li>
+            <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+          </ul>
+    </div>
+    <div class="subscribe info">
+        <h3>Subscribe</h3>
+        <form>
+            <input type="email" placeholder="Your Email Address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+  </div>
+
+  <footer>
+      <h2>Find Us</h2>
+      <div class="social_link">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+  </footer>
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+
+</body>
+</html>

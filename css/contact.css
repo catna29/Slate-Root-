@@ -156,42 +156,98 @@
 
 
   /* New Arrivals */
-  main h1{
+h1{
     text-align: center;
     color: var(--grey);
     border-bottom: solid;
     padding-bottom: 1rem;
   }
 
-  .lookbook {
-    padding: 2rem;
-  }
-  
-  .lookbook h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .products {
+  main .contact_form{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2em;
-  }
-  
-  .product {
-    flex: 1 1 30%;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem auto;
+    padding: 0rem 1rem;
   }
 
-  .product p {
-    margin: 1em 0px;
+  main h2{
+    margin-bottom: 1rem;
+  }
+
+  main .FAQ{
+    margin: 3rem auto;
+    padding: 0rem 1rem;
+  }
+
+  .detail{
+    flex: 1 1 40%;
+
+  }
+
+  main label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--grey);
   }
   
-  .product img {
+  main input,
+  textarea {
     width: 100%;
-    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--blue);
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    
   }
   
+  main textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  main button {
+    width: 100%;
+    padding: 10px;
+    color: var(--blue);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  main button:hover {
+    background-color: rgb(211, 210, 210);
+  }
+
+  main .ship{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+
+  }
+
+  main .ship_content{
+    display: flex;
+    flex-direction: column;
+    gap:20px ;
+  }
+
+  main .ship_content h4 {
+    color: var(--grey);
+    background: rgb(212, 210, 210);
+    padding: .8rem;
+    border-radius: 3px;
+
+  }
   
   /* Footer info */
   .footer_info {
@@ -282,15 +338,21 @@
       --fs-500:clamp(.9rem,1vw + .8rem, 1rem) ;
     }
   
-    .product {
-        flex: 1 1 40%;
-      
-    }
   
     header {
       flex-direction: row;
   
     }
+
+    main .contact_form{
+        flex-direction: column;
+      }
+
+    main .ship{
+        justify-content: space-between;
+        gap: 2rem;
+    
+      }
   
     .nav-links {
       margin-top: 0.5rem;
