@@ -275,6 +275,10 @@
     cursor: pointer;
   }
 
+  .subscribe button:hover{
+    background: var(--red);
+  }
+
   .subscribe h3{
     margin-bottom: 15px ;
   }
