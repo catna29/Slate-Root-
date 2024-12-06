@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kurale&family=Laila:wght@300;400;500;600;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kurale&family=Laila:wght@300;400;500;600;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
 
 :root {
     --black:#000000;
     --white:#FFFFFF;
     --blue: #4147EB;
     --red:#EB4141;
-    --grey:#716F6F;
+    --grey:#000000;
     --fs-xl:clamp(1.5rem,1.3vw + .8rem, 2rem) ;
     --fs-500:clamp(1rem,1.3vw + .5rem, 1.5rem) ;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow variable for consistency */
 
   }
   
@@ -31,7 +32,6 @@
     font-family: "Teko", sans-serif;
   }
   
-  /* Header */
   header {
     display: flex;
     justify-content: space-between;
@@ -170,6 +170,133 @@ h1{
     margin: 3rem auto;
     padding: 0rem 1rem;
   }
+/* Styling for the "Have a Question?" Section */
+.contact_form .question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem; 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.contact_form .question h2 {
+  font-size: 2.5rem; 
+  margin-bottom: 1rem;
+}
+
+.contact_form .question h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.contact_form .question p {
+  font-size: 1.1rem; 
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+/* Styling for the "Submit an Inquiry" Form Section */
+.contact_form .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  gap: 1.5rem; 
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/*  padding/space around the entire contact form */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 2rem; 
+  margin: 3rem auto;
+  max-width: 900px; 
+  padding: 0 1rem;
+}
+
+.contact_form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--grey);
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+.contact_form textarea {
+  height: 120px; 
+  resize: none;
+}
+
+.contact_form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact_form button:hover {
+  background-color: var(--red); 
+}
+
+
+.footer_info {
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer_info .info {
+  flex: 1 1 30%;
+  border-style: solid;
+  border-width: 1px;
+  padding: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+  .contact_form {
+    padding: 0 1rem;
+    gap: 1.5rem; 
+  }
+
+  .contact_form .question {
+    width: 100%; 
+  }
+
+  .contact_form .form-container {
+    width: 100%; 
+  }
+}
 
   main h2{
     margin-bottom: 1rem;
@@ -179,11 +306,90 @@ h1{
     margin: 3rem auto;
     padding: 0rem 1rem;
   }
+  /* FAQ Section Styling */
+.FAQ {
+  margin: 3rem auto;
+  padding: 0rem 1rem;
+  max-width: 1000px;
+}
 
-  .detail{
-    flex: 1 1 40%;
+.FAQ h2 {
+  text-align: center;
+  color: var(--black);
+  font-size: var(--fs-xl);
+  margin-bottom: 2rem;
+}
 
+.FAQ .ship {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.FAQ .ship_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.FAQ .ship_content h4 {
+  background-color: var(--white);
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  color: var(--black);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.FAQ .ship_content h4:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.FAQ .ship_content p {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  display: none;
+  font-size: 1rem;
+  color: var(--grey);
+}
+
+.FAQ .ship_content .active {
+  display: block;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+  .FAQ .ship {
+    gap: 1rem;
   }
+
+  .FAQ .ship_content h4 {
+    font-size: 1.2rem;
+  }
+
+  .FAQ .ship_content p {
+    font-size: 1rem;
+  }
+}
+
+
+  .detail {
+    flex: 1 1 40%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
 
   main label {
     display: block;
@@ -383,3 +589,4 @@ h1{
  
     
   }
+  
